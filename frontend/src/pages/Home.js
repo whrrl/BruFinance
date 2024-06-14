@@ -4,7 +4,25 @@ import BruBond from "../component/BruBond";
 import Holding from "../component/Holding";
 import Transaction from "../component/Transaction";
 import { PiCurrencyInrThin } from "react-icons/pi"
+import { getTotalDepositors } from "../services/apiService";
+import { useEffect, useState } from "react";
+
 const Home = () => {
+    const [trxData, setTrxData] = useState([]);
+
+    const trx = async () => {
+        const trxData = await getTotalDepositors();
+        //console.log(trxData,'data')
+        if (trxData.success) {
+            console.log("%c Line:14 🍯 trxData", "color:#4fff4B", trxData);
+            setTrxData(trxData?.data)
+        }
+    }
+
+    useEffect(() => {
+        trx()
+    }, [])
+
     return (
         <div className="home">
             <Row className="intro">
@@ -22,7 +40,9 @@ const Home = () => {
                             <Card className="mx-4 asset-box">
                                 <Card.Body>
                                     <h1 className="mt-2">
-                                        <PiCurrencyInrThin /> 0
+                                        <PiCurrencyInrThin /> {trxData?.totalAssetsValue
+                                            ? trxData?.totalAssetsValue
+                                            : 0}
                                     </h1>
                                     <p>
                                         Total Value of Assets

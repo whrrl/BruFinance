@@ -39,18 +39,18 @@ export const getData = async (key) => {
     }
 };
 
-// export const getTotalDepositors = (data) => {
-//   return new Promise(async (resolve, reject) => {
-//     await request
-//       .get("/api/v1/nfts/nftDatas", )
-//       .then((res) => {
-//         resolve(res.data);
-//       })
-//       .catch((e) => {
-//         resolve(false);
-//       });
-//   });
-// };
+export const getTotalDepositors = (data) => {
+    return new Promise(async (resolve, reject) => {
+        await request
+            .get("/api/v1/nfts/nftDatas",)
+            .then((res) => {
+                resolve(res.data);
+            })
+            .catch((e) => {
+                resolve(false);
+            });
+    });
+};
 
 // export const getPolAddress = () => {
 //     return new Promise(async (resolve, reject) => {
@@ -417,6 +417,7 @@ export const updateNFtDataRepay = async (nftId, data) => {
 //         });
 //     });
 //   };
+
 // completeProfile(data: any, token: any) {
 //   console.log(token);
 //   this.authToken = token;
