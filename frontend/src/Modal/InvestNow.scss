@@ -1,0 +1,22 @@
+.upload {
+    border-radius: 4px;
+          align-items: center;
+          text-align: center;
+          color: #7c037b;
+          padding: 10px 30px;
+          outline: none;
+          border: none;
+          margin-top: 20px;
+          margin-left: 0px;
+          font-weight: 700;
+          background: white;
+          border: 2px solid #540f7a;
+          width:100%;
+          //pointer-events: none;
+  }
+
+  .upload:hover{
+    color:white;
+    background-color: #7c037b;
+    border: 2px solid #540f7a;
+  }

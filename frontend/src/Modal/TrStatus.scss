@@ -1,0 +1,64 @@
+
+.modal-content{
+  border: 20px solid grey ;
+  --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.modal-header{
+  border-bottom: none ;
+  padding:10px 16px 6px ;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.60); 
+  &.tr-status .modal-content {
+    backdrop-filter: blur(50px);  
+    border:none   
+  }
+
+  &.tr-status .modal-title {
+ padding-left: 12px;
+ font-size: 28px;
+ line-height: 36px;
+ color: #02000a;
+ font-weight: 500;
+    }
+  &.tr-status .modal-dialog {
+  max-width: 530px ;
+    background-color: transparent; 
+    }
+&.tr-status .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+  .tr-status .container{
+    display: flex;
+    width: 100%;
+    background: rgba(199, 0, 57, 0.1);
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 148px !important;
+    border-radius: 10px;
+    padding: 10px !important;
+    position: relative;
+  }
+  .tr-status .container img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .tr-status  .btn-continue{
+    background:  #7c037b ;
+    border-radius: 4px;
+    text-align: center;
+    color: #fcfafa;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 33px;
+ } 

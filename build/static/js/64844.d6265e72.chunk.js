@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbru_finance=self.webpackChunkbru_finance||[]).push([[64844],{64844:(n,l,u)=>{u.r(l),u.d(l,{wallet:()=>e});const e={id:"xyz.bonuz",name:"Bonuz",homepage:"https://bonuz.xyz",image_id:"4f8737be-5aa1-4dff-d956-39c81a998e00",app:{browser:null,ios:"https://bonuz.xyz",android:"https://bonuz.xyz",mac:null,windows:null,linux:null,chrome:null,firefox:null,safari:null,edge:null,opera:null},rdns:null,mobile:{native:"bonuzapp://",universal:null},desktop:{native:null,universal:null}}}}]);
+//# sourceMappingURL=64844.d6265e72.chunk.js.map

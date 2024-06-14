@@ -1,0 +1,25 @@
+{
+    "name": "brunetwork",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "express": "^4.19.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "start": "node app.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://gitlab.com/whrrl-chain/brunetwork.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://gitlab.com/whrrl-chain/brunetwork/issues"
+    },
+    "homepage": "https://gitlab.com/whrrl-chain/brunetwork#readme"
+  }

@@ -1,0 +1,104 @@
+
+.modal-content{
+    border: 20px solid grey ;
+}
+.modal-header{
+    border-bottom: none ;
+    padding:10px 16px 6px ;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.15); 
+    &.blur-login .modal-content {
+        backdrop-filter: blur(50px); 
+        border:none   
+    }
+    &.blur-login .modal-dialog {
+    max-width: 510px ;
+    background-color: transparent; 
+    }
+&.blur-login .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+   
+.login-body{
+    h3{
+        background: linear-gradient(90deg, #540f7a 0%, #7c037b 23.88%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        width: 100%;
+        text-align: center;
+        padding: 20px 20px 15px;
+        border-bottom: 3px solid #7c037b;
+    }
+    .login-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        margin-top: 45px;
+    }
+    .user-symbol{
+        width: 40px;
+        height: 40px;
+        fill: #7c037b;
+    }
+    p{
+        color: rgba(0, 0, 0, 0.48);
+        font-weight: 500;
+    }
+    input{
+        width: 100%;
+        border: 2px solid rgba(0, 0, 0, 0.098);
+        border-radius: 8px; 
+        padding: 12px;
+        font-size: 26px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+    }
+    .btn-other{
+        padding: 20px;
+        background: linear-gradient(90deg, #540f7a 0%, #7c037b 23.88%);
+        border-radius: 8px;
+        color: #fcfafa;
+        font-size: 22px;
+        border: none;
+        outline: none;
+        width: 100%;
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        margin-top: 40px;
+     }
+     .login-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        p{
+          opacity: 100%;
+          font-size: 16px;  
+          font-weight: 400;
+          color: black;
+          margin-bottom: 0;
+        }
+        .sign-up{
+          background: linear-gradient(90deg, #540f7a 0%, #7c037b 23.88%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          cursor: pointer;
+        }
+     }
+}
+
+ @media screen and (max-width: 430px) {
+    .blur-login  .modal-content{
+        min-height: none !important;
+    }   
+   }

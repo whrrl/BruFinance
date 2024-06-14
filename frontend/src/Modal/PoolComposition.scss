@@ -1,0 +1,108 @@
+
+.modal-content{
+  border: 20px solid grey ;
+  --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.modal-header{
+  border-bottom: none ;
+  padding:10px 16px 6px ;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.60); 
+  &.pool .modal-content {
+    backdrop-filter: blur(50px);  
+    border:none   
+  }
+  &.pool .modal-dialog {
+    max-width: 530px ;
+    background-color: transparent; 
+    }
+  &.pool .modal-header {
+    padding: 18px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center !important;
+    background-color: #1f1f1f21;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 0 auto; 
+  }
+  &.pool .modal-title {
+    margin: 0;
+    width: 100%;
+    
+  }
+  &.pool .modal-header .btn-close {
+    margin-left: auto;
+  }
+&.pool .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+  
+ 
+  .pool .thead{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    background-color: transparent;
+    text-align: left;
+    height: 49px;
+    border-radius:6px;
+    color: grey;
+  }
+  .pool .tbody{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    height: 52px;
+    background-color: transparent;
+    margin-block: 5px;
+    text-align: center;
+  }
+
+.pool .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  width:100%;
+  padding:0
+}
+  .pool .btn-continue{
+    background:  #7c037b ;
+    border-radius: 4px;
+    text-align: center;
+    color: #fcfafa;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 33px;
+ } 
+.pool .tab{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  grid-template-columns:1fr 1fr;
+}
+ .pool .assets{
+  background-color: #ecdcf3;
+  padding: 16px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+}

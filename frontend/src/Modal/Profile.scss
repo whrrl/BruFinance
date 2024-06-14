@@ -1,0 +1,31 @@
+.modal-content{
+    border: 20px solid grey ;
+    
+}
+.modal-header{
+    border-bottom: none ;
+    padding:10px 16px 6px ;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.15); 
+    &.blur-login .modal-content {
+        backdrop-filter: blur(50px); 
+        border:none   
+    }
+    &.blur-login .modal-dialog {
+    max-width: 510px ;
+    background-color: transparent; 
+    }
+&.blur-login .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+
+  
+  
+
+  @media screen and (max-width: 430px) {
+    .blur-login  .modal-content{
+        min-height: none !important;
+    }   
+   }

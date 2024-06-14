@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbru_finance=self.webpackChunkbru_finance||[]).push([[66977],{66977:(n,a,e)=>{e.r(a),e.d(a,{default:()=>t});const t={connecting:"Kumokonekta sa Smart Account",failedToConnect:"Hindi nagawa ang pagkonekta sa Smart Account",wrongNetworkScreen:{title:"Maling Network",subtitle:"Hindi konektado ang iyong wallet sa kinakailangang network",failedToSwitch:"Hindi nagawa ang pagpapalit ng network"}}}}]);
+//# sourceMappingURL=66977.de6715a6.chunk.js.map

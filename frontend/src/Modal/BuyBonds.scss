@@ -1,0 +1,75 @@
+
+.modal-content{
+  border: 20px solid grey ;
+  --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.modal-header{
+  border-bottom: none ;
+  padding:10px 16px 6px ;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.60); 
+  &.blur .modal-content {
+    backdrop-filter: blur(50px);     
+  }
+  &.blur .modal-dialog {
+  max-width: 600px ;
+    background-color: transparent; 
+    }
+&.blur .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+  
+  .blur .modal-container{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(2, 0, 10, 0.9);
+    display: flex;
+    justify-content: space-between;
+  }
+  .blur .desc p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .blur .btn-continue{
+    background: linear-gradient(90deg, #540f7a 0%, #7c037b 23.88%);
+    border-radius: 4px;
+    text-align: center;
+    color: #fcfafa;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border: none;
+    padding: 0.6rem 1.5rem;
+  }
+  .blur .peep-img{
+    margin-bottom: -16px;
+    position: unset;
+    margin-right: -10px;
+  }
+  
+  @media screen and (max-width: 430px) {
+    .blur .modal-content{
+        min-height: 60vh !important;
+    }
+    .blur .peep-img{
+        position: absolute;
+        margin-bottom: -16px;
+        margin-right: -10px;
+        bottom: 27px;
+        right: -17px;
+        display: flex;
+    }
+    .blur  .btn-continue{
+        position: absolute !important;
+        bottom: 27px !important;
+        width: unset;
+     }
+   }
+ 

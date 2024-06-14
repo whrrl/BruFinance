@@ -1,0 +1,65 @@
+
+.modal-content{
+    border: 20px solid grey ;
+}
+.modal-header{
+    border-bottom: none ;
+    padding:10px 16px 6px ;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.15); 
+    &.blurs .modal-content {
+        backdrop-filter: blur(50px); 
+        border:none   
+    }
+    &.blurs .modal-dialog {
+    max-width: 500px ;
+    background-color: transparent; 
+    }
+&.blurs .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+  
+ .btn-india{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #cd6116;
+    border-left: 8px solid #cd6116;
+    border-color: #cd6116;
+    background: rgba(205, 97, 22, 0.1);
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    border-style: solid;
+    padding: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 20px;
+ }
+ .btn-other{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-color: #0973fe;
+    background: rgba(9, 115, 254, 0.1);
+    border-left: 8px solid #0973fe;
+    color: #0973fe;
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    border-style: solid;
+    padding: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+ }
+
+ @media screen and (max-width: 430px) {
+    .blurs  .modal-content{
+        min-height: none !important;
+    }
+    
+   }

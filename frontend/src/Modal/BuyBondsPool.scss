@@ -1,0 +1,165 @@
+
+.modal-content{
+  border: 20px solid grey ;
+  --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.modal-header{
+  border-bottom: none ;
+  padding:10px 16px 6px ;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.60); 
+  &.buy-bonds .modal-content {
+    backdrop-filter: blur(50px);  
+    border:none   
+  }
+  &.buy-bonds .modal-dialog {
+    max-width: 530px ;
+    background-color: transparent; 
+    }
+  &.buy-bonds .modal-header {
+    padding: 18px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center !important;
+    background-color: #1f1f1f21;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 0 auto; 
+  }
+  &.buy-bonds .modal-title {
+    margin: 0;
+    width: 100%;
+  }
+  &.buy-bonds .modal-header .btn-close {
+    margin-left: auto;
+  }
+&.buy-bonds .modal-backdrop {
+      backdrop-filter: blur(50px);
+    }
+  }
+  
+  .buy-bonds .tab{ 
+    background-color: #a670c01a;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+ .buy-bonds  .tab-row{
+    font-size: 14px;
+    display: grid;
+    align-items: start;
+    justify-content: left;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+ .buy-bonds   .assets{
+    background-color: #ecdcf3;
+    padding: 16px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0.1rem;
+    display: flex;
+    align-items: center;
+  }
+.buy-bonds .second-container{
+display: grid;
+gap: 15px;
+align-items: flex-start;
+justify-content: center;
+grid-template-columns: 1fr 1fr;
+}
+.buy-bonds .flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: grey;
+  font-size: 14px;
+  margin-block: 10px;
+  padding: 5px;
+}
+.buy-bonds .flex-col p{
+  margin-bottom: 0;
+}
+.buy-bonds .flex-col input{
+  padding: 9px;
+  text-align: right;
+  font-size: 17px;
+  width: 100%;
+  color: #832b81;
+  border-radius: 6px;
+  border: 1px solid #bcbcbc;
+  outline: none;
+}
+.buy-bonds .flex-col .price-breakup{
+  padding: 9px 0;
+  text-align: left;
+  font-size: 13px;
+  width: 100%;
+  color: #505050;
+  border-radius: 6px;
+  border: 1px solid #bcbcbc;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+.buy-bonds .price-breakup p{
+  padding: 10px 15px;
+}
+.buy-bonds .select-crypto{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(196, 196, 196, 0.54);
+  color: black;
+  padding: 12px 8px;
+  border-radius: 8px;
+  position: relative;
+  gap:15px
+}
+.buy-bonds .select-crypto img{
+  width: 22px;
+  height:22px
+}
+.buy-bonds .select-crypto p{
+  padding-left: 5%;
+    color: #515151;
+    margin-bottom: 0;
+    border-left: 1px solid grey;
+}
+.buy-bonds .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  width:100%;
+  padding:0
+}
+.buy-bonds  .btn-continue{
+    background:  #7c037b ;
+    border-radius: 4px;
+    text-align: center;
+    color: #fcfafa;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 33px;
+ } 
