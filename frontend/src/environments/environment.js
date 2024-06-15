@@ -79,6 +79,30 @@ export const environment = {
             RouterAddress: "0xe8BF2801a3e457FE141407a3b39F47fDE83B376f",
             PoolAddress: "0xc345e8f86E7EFbCB2cC4302b2dE116E4EBB727bA",
         },
+        8453: {
+            InfuraUrl:
+                "https://8453.rpc.thirdweb.com/",
+            InfuraName: "Base",
+            explorerUrl: "https://polygonscan.com/tx/",
+            name: "Base Mainnet Network",
+            tokens: {
+                USDT: {
+                    name: "USDT",
+                    address: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
+                    decimal: 6,
+                },
+                USDC: {
+                    name: "USDC",
+                    address: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
+                    decimal: 6,
+                },
+            },
+            TokenAddress: "0x04Fa61C73B2802F883cF30a746227E607Ed1D9f3",
+            USDCTokenAddress: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
+            factoryAddress: "0xE31901bCa1B09c8Cc0d049B65a331af324B32F7D",
+            RouterAddress: "0x2dF0f96668Ea54E7654093F8Af45bD1DFA0Cf112",
+            PoolAddress: "0x8031e06cdC4869B8615414c9f2e1c7A4450D9087",
+        },
         59140: {
             InfuraUrl:
                 "https://linea-goerli.infura.io/v3/b75ffec8191348e8a87319d4dfcd74da",

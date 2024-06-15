@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar"
 import { createThirdwebClient } from "thirdweb";
 import { ConnectButton } from "thirdweb/react"
 import { createWallet, inAppWallet } from "thirdweb/wallets";
+import { polygon, base } from "thirdweb/chains";
 
 const client = createThirdwebClient({
   clientId: "8b47ef3dc283abe26da04b0549a7d6e8",
@@ -33,6 +34,11 @@ const PageNavBar = () => {
                     </Nav>
                 </Navbar.Collapse> */}
         <ConnectButton
+          appMetadata={{
+            name: "Bru Finance",
+            url: "https://beta.bru.finance/",
+          }}
+          chains={[polygon, base]}
           client={client}
           wallets={wallets} />
       </Container>
