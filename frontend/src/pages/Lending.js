@@ -9,6 +9,7 @@ import holding from "../assets/image/vault_black.svg";
 import arrow from "../assets/image/Vector43.png";
 import bond_white from "../assets/image/bond_white.png";
 import poly from "../assets/image/polygon_logo.png";
+import baseLogo from "../assets/image/base.png";
 import vault_white from "../assets/image/vault_white.png";
 import { ImCopy } from "react-icons/im";
 import {
@@ -211,7 +212,7 @@ const Lending = () => {
                     <div className="section-nav">
                         <div id="p-network">
                             <button>
-                                <img src={poly} alt="token" />
+                                <img src={environment.contracts[chainId].InfuraName == "Base" ? baseLogo : poly} alt="token" width="20px" />
                                 {chainId
                                     ? environment.contracts[chainId].name
                                     : ""}

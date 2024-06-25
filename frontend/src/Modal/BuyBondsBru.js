@@ -5,6 +5,7 @@ import usdt from "../../src/assets/image/usdt.png";
 import polygon from "../../src/assets/image/polygon_logo.png";
 import usdc from "../../src/assets/image/usdc.png";
 import buy from "../../src/assets/image/buy.png";
+import baseLogo from "../../src/assets/image/base.png"
 import TrStatus from "./TrStatus";
 import { FaSortDown } from "react-icons/fa6";
 import { useAddress, useChainId, useSigner } from "@thirdweb-dev/react";
@@ -152,7 +153,7 @@ const BuyBondsBru = ({ open, handleClose }) => {
                                 <div className="flex-col">
                                     <p>Network</p>
                                     <div className="select-crypto">
-                                        <img src={polygon} alt="" />
+                                        <img src={environment.contracts[chainId].InfuraName == "Base" ? baseLogo : polygon} alt="token" width="20px" />
                                         <p style={{ borderLeft: "none" }}>
                                             {chainId
                                                 ? environment.contracts[chainId]

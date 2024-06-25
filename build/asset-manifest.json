@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fb5d55e6.css",
-    "main.js": "/static/js/main.3d4c33fb.js",
+    "main.js": "/static/js/main.cf2299bb.js",
     "static/js/6957.a6fdbf11.chunk.js": "/static/js/6957.a6fdbf11.chunk.js",
     "static/js/78902.751e19ce.chunk.js": "/static/js/78902.751e19ce.chunk.js",
     "static/js/86467.d89e9e24.chunk.js": "/static/js/86467.d89e9e24.chunk.js",
@@ -862,6 +862,7 @@
     "static/js/81782.ecd620b3.chunk.js": "/static/js/81782.ecd620b3.chunk.js",
     "static/js/48364.516c025f.chunk.js": "/static/js/48364.516c025f.chunk.js",
     "static/js/51476.85390be3.chunk.js": "/static/js/51476.85390be3.chunk.js",
+    "static/media/base.png": "/static/media/base.6f1b2ba0322f919d3301.png",
     "static/media/Rice.jpg": "/static/media/Rice.7541cf64ce1fdae5d9f7.jpg",
     "static/media/como.png": "/static/media/como.a0c83d3210d5a5bac6e1.png",
     "static/media/bond_black.svg": "/static/media/bond_black.d58a8b6778d1287507535050729cbd53.svg",
@@ -874,7 +875,7 @@
     "static/media/Guranteed _Returns.png": "/static/media/Guranteed _Returns.1e7bd5fb9d0e819a4811.png",
     "index.html": "/index.html",
     "main.fb5d55e6.css.map": "/static/css/main.fb5d55e6.css.map",
-    "main.3d4c33fb.js.map": "/static/js/main.3d4c33fb.js.map",
+    "main.cf2299bb.js.map": "/static/js/main.cf2299bb.js.map",
     "6957.a6fdbf11.chunk.js.map": "/static/js/6957.a6fdbf11.chunk.js.map",
     "78902.751e19ce.chunk.js.map": "/static/js/78902.751e19ce.chunk.js.map",
     "86467.d89e9e24.chunk.js.map": "/static/js/86467.d89e9e24.chunk.js.map",
@@ -1712,6 +1713,6 @@
   },
   "entrypoints": [
     "static/css/main.fb5d55e6.css",
-    "static/js/main.3d4c33fb.js"
+    "static/js/main.cf2299bb.js"
   ]
 }
