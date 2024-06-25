@@ -212,9 +212,9 @@ const Lending = () => {
                     <div className="section-nav">
                         <div id="p-network">
                             <button>
-                                <img src={environment.contracts[chainId].InfuraName == "Base" ? baseLogo : poly} alt="token" width="20px" />
+                                <img src={environment.contracts[chainId]?.InfuraName == "base" ? baseLogo : poly} alt="token" width="20px" />
                                 {chainId
-                                    ? environment.contracts[chainId].name
+                                    ? environment.contracts[chainId]?.name
                                     : ""}
                             </button>
                         </div>

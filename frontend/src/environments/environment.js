@@ -82,7 +82,7 @@ export const environment = {
         8453: {
             InfuraUrl:
                 "https://8453.rpc.thirdweb.com/",
-            InfuraName: "Base",
+            InfuraName: "base",
             explorerUrl: "https://polygonscan.com/tx/",
             name: "Base Mainnet Network",
             tokens: {

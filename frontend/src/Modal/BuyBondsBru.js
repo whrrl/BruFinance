@@ -153,11 +153,11 @@ const BuyBondsBru = ({ open, handleClose }) => {
                                 <div className="flex-col">
                                     <p>Network</p>
                                     <div className="select-crypto">
-                                        <img src={environment.contracts[chainId].InfuraName == "Base" ? baseLogo : polygon} alt="token" width="20px" />
+                                        <img src={environment.contracts[chainId]?.InfuraName == "base" ? baseLogo : polygon} alt="token" width="20px" />
                                         <p style={{ borderLeft: "none" }}>
                                             {chainId
                                                 ? environment.contracts[chainId]
-                                                    .name
+                                                    ?.name
                                                 : " Polygon Network"}
                                         </p>
                                     </div>
