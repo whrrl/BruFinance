@@ -89,12 +89,12 @@ export const environment = {
                 USDT: {
                     name: "USDT",
                     address: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
-                    decimal: 6,
+                    decimal: 18,
                 },
                 USDC: {
                     name: "USDC",
                     address: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
-                    decimal: 6,
+                    decimal: 18,
                 },
             },
             TokenAddress: "0x04Fa61C73B2802F883cF30a746227E607Ed1D9f3",

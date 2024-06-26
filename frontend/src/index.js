@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Provider } from "react-redux";
 import configureStore from "./redux/store";
-import { Polygon, Mumbai, LineaGoerli , Base} from "@thirdweb-dev/chains";
+import { Polygon, Mumbai, LineaGoerli, Base } from "@thirdweb-dev/chains";
 // import { client } from "./client";
 import { createThirdwebClient } from "thirdweb";
 import { ThirdwebProvider as ThirdwebProviderV5 } from "thirdweb/react"
@@ -28,9 +28,10 @@ const store = configureStore();
 
 root.render(
     <ThirdwebProvider
+        clientId="8b47ef3dc283abe26da04b0549a7d6e8"
         activeChain={Mumbai}
         supportedChains={[Mumbai, Polygon, LineaGoerli, Base]}
-        useSmartWallet={true}
+    // useSmartWallet={true}
     >
         <ThirdwebProviderV5>
             <React.StrictMode>

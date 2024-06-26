@@ -30,8 +30,15 @@ import { getTokenBalance } from "../utility/token";
 import { getUserBondIds } from "../utility/pool";
 import { Button } from "react-bootstrap";
 import copy from "copy-to-clipboard";
-import { useActiveAccount, useActiveWalletChain, } from "thirdweb/react";
+import { useActiveAccount, useActiveWalletChain, useSwitchActiveWalletChain, } from "thirdweb/react";
+import { createThirdwebClient } from "thirdweb";
 import { ethers5Adapter } from "thirdweb/adapters/ethers5";
+
+
+const client = createThirdwebClient({
+    clientId: "8b47ef3dc283abe26da04b0549a7d6e8",
+});
+
 
 const Lending = () => {
     const [toggleNav, setToggleNav] = useState("BruBonds");
@@ -51,41 +58,31 @@ const Lending = () => {
         }
     };
 
-    // const [address, setAddress] = useState("")
-    // const [chainId, setChainId] = useState("")
-    // const [signer, setSigner] = useState("")
+    const [address, setAddress] = useState("")
+    const [chainId, setChainId] = useState("")
+    const [signer, setSigner] = useState("")
 
 
     const add = useActiveAccount()
     const chain = useActiveWalletChain();
 
-    const address = useAddress();
-    const signer = useSigner();
-    const chainId = useChainId();
+    useEffect(() => {
+        if (add && add.address) {
+            console.log("%c Line:80 🍷 add", "color:#33a5ff", add);
+            setAddress(add.address)
+            if (chain && chain.id && chain.rpc) {
+                setChainId(chain.id)
+                console.log("%c Line:81 🍰 chain", "color:#33a5ff", chain);
+                setSignerFun(chain, add)
+            }
+        }
+    }, [add, chain])
 
-    // useEffect(() => {
-    //     if (add && add.address) {
-    //         setAddress(add.address)
-    //     }
-    //     // if (add && add.signTypedData) {
-    //     //     setSigner(add)
-    //     // }
-    //     if (chain && chain.id) {
-    //         setChainId(add.id)
-    //     }
-    //     const data = async () => {
-    //         const sign = await ethers5Adapter.signer();
-    //         console.log("%c Line:68 🍬 sign", "color:#3f7cff", sign);
-    //     }
-    //     data()
-    // }, [add, chain])
-
-    // // const address = useActiveAccount();
-    // console.log("%c Line:53 🥛 address", "color:#33a5ff", address);
-    // // const signer = useActiveAccount();
-    // console.log("%c Line:73 🥥 signer", "color:#ffdd4d", signer);
-    // // const chainId = useActiveWalletChain();
-    // console.log("%c Line:56 🌰 chainId", "color:#ea7e5c", chainId);
+    const setSignerFun = async (chain, addr) => {
+        const sign = await ethers5Adapter.signer.toEthers({ client, chain, account: addr });
+        console.log("%c Line:68 🍬 sign", "color:#3f7cff", sign);
+        setSigner(sign)
+    }
 
     const [usdtBalance, setUsdtBalance] = useState(0);
     const [usdcBalance, setUsdcBalance] = useState(0);
@@ -94,6 +91,7 @@ const Lending = () => {
 
     useEffect(() => {
         if (!address || !signer) return;
+        console.log("%c Line:114 🍡 signer", "color:#ffdd4d", signer);
         const getData = async () => {
             let getTokenBal = await getTokenBalance(
                 address,
