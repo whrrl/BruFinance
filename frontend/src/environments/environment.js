@@ -86,19 +86,19 @@ export const environment = {
             explorerUrl: "https://polygonscan.com/tx/",
             name: "Base Mainnet Network",
             tokens: {
+                USDC: {
+                    name: "USDC",
+                    address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                    decimal: 6,
+                },
                 USDT: {
                     name: "USDT",
                     address: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
                     decimal: 18,
                 },
-                USDC: {
-                    name: "USDC",
-                    address: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
-                    decimal: 18,
-                },
             },
             TokenAddress: "0x04Fa61C73B2802F883cF30a746227E607Ed1D9f3",
-            USDCTokenAddress: "0xdE8162161DbF4497ef6D04f4c4E5ed7dB09d6fe4",
+            USDCTokenAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
             factoryAddress: "0xE31901bCa1B09c8Cc0d049B65a331af324B32F7D",
             RouterAddress: "0x2dF0f96668Ea54E7654093F8Af45bD1DFA0Cf112",
             PoolAddress: "0x8031e06cdC4869B8615414c9f2e1c7A4450D9087",
