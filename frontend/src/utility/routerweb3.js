@@ -15,14 +15,6 @@ export const buyBonds = async (token, amount, signer, chainId) => {
                 amount,
                 environment.contracts[chainId].tokens[token].decimal,
             );
-            console.log(
-                "%c Line:104 🍣 amount",
-                "color:#ed9ec7",
-                amount,
-                token,
-                environment.contracts[chainId].tokens[token].address,
-                value,
-            );
             await contract
                 .deposit(
                     0,

@@ -100,7 +100,7 @@ const BuyBondsBru = ({ open, handleClose }) => {
 
         let data = await approveToken(
             selectedOption.id == 1 ? "USDT" : "USDC",
-            environment.contracts[chainId].RouterAddress,
+            environment.contracts[chainId].PoolAddress,
             signer,
             chainId,
         );
