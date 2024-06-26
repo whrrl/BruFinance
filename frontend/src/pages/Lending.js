@@ -30,9 +30,10 @@ import { getTokenBalance } from "../utility/token";
 import { getUserBondIds } from "../utility/pool";
 import { Button } from "react-bootstrap";
 import copy from "copy-to-clipboard";
-import { useActiveAccount, useActiveWalletChain, useSwitchActiveWalletChain, } from "thirdweb/react";
+import { useActiveAccount, useActiveWalletChain, } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 import { ethers5Adapter } from "thirdweb/adapters/ethers5";
+import { getTotalDepositors } from "../services/apiService";
 
 
 const client = createThirdwebClient({
@@ -48,6 +49,23 @@ const Lending = () => {
     const [buyBondsBruModal, setBuyBondsBruModal] = useState(false);
     const [showBondModal, setShowBondModal] = useState(false);
 
+
+    const [trxData, setTrxData] = useState([]);
+
+    const trx = async () => {
+        const trxData = await getTotalDepositors();
+        //console.log(trxData,'data')
+        if (trxData.success) {
+            console.log("%c Line:14 🍯 trxData", "color:#4fff4B", trxData);
+            setTrxData(trxData)
+        }
+    }
+
+    useEffect(() => {
+        trx()
+    }, [])
+
+
     //console.log(toggleNav, "nav");
 
     const formatAddress = (address) => {
@@ -61,7 +79,6 @@ const Lending = () => {
     const [address, setAddress] = useState("")
     const [chainId, setChainId] = useState("")
     const [signer, setSigner] = useState("")
-
 
     const add = useActiveAccount()
     const chain = useActiveWalletChain();
@@ -145,7 +162,7 @@ const Lending = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">0</span>
+                            <span className="assets-val">{trxData?.totalAssets}</span>
                         </p>
                     </div>
                     <div className="d-bottom">
@@ -170,7 +187,7 @@ const Lending = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">$ 0</span>
+                            <span className="assets-val">$ {trxData?.totalAssetsValue}</span>
                         </p>
                     </div>
                     <div className="a-bottom">
@@ -191,7 +208,7 @@ const Lending = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">$ 0</span>
+                            <span className="assets-val">$ {trxData?.totalAssetsValueMinted}</span>
                         </p>
                     </div>
                     <div className="a-bottom">

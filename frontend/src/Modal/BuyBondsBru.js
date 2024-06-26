@@ -31,9 +31,9 @@ const BuyBondsBru = ({ open, handleClose }) => {
     const [first, setFirst] = useState(false);
     const [dropdown, setDropdown] = useState(false);
     const [selectedOption, setSelectedOption] = useState({
-        id: 1,
-        label: "Tether (USDT)",
-        image: usdt,
+        id: 2,
+        label: "USD Coin (USDC)",
+        image: usdc,
     });
 
     const array = [
