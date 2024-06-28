@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbru_finance=self.webpackChunkbru_finance||[]).push([[67143],{67143:(n,e,a)=>{a.r(e),a.d(e,{hashMessage:()=>f});var r=a(52620),s=a(42002),t=a(24793);const c="\x19Ethereum Signed Message:\n";function f(n,e){const a="string"===typeof n?(0,s.Af)(n):n.raw instanceof Uint8Array?n.raw:(0,s.ZJ)(n.raw),f=(0,s.Af)("".concat(c).concat(a.length));return(0,t.S)((0,r.xW)([f,a]),e)}}}]);
-//# sourceMappingURL=67143.af4d7e35.chunk.js.map

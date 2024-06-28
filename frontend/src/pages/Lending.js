@@ -340,7 +340,11 @@ const Lending = () => {
                                                 >
                                                     Show Bonds
                                                 </p>
-                                                <p>Total Issued Bonds : $ 0</p>
+                                                <p>Total Issued Bonds : $ {bruBondBalance?.bondAmount
+                                                        ? bruBondBalance?.bondAmount?.toFixed(
+                                                            3,
+                                                        )
+                                                        : 0.0}{" "}</p>
                                             </div>
                                             <button
                                                 className="btn-continue"

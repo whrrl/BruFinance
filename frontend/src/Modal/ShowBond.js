@@ -85,9 +85,9 @@ const ShowBond = ({ open, handleClose }) => {
                                     {bruBondBalance?.tokenAmount &&
                                         bruBondBalance?.tokenAmount?.length > 0 ? (
                                         bruBondBalance?.tokenAmount.map((ele) =>
-                                            ele?.time >
-                                                new Date().getTime() / 1000 +
-                                                15552000 ? (
+                                            ele?.time <
+                                                ((new Date().getTime() / 1000) +
+                                                    15552000) ? (
                                                 <tr>
                                                     <td>
                                                         USD {ele?.bondAmount}
@@ -123,9 +123,9 @@ const ShowBond = ({ open, handleClose }) => {
                                     {bruBondBalance?.tokenAmount &&
                                         bruBondBalance?.tokenAmount?.length > 0 ? (
                                         bruBondBalance?.tokenAmount.map((ele) =>
-                                            ele?.time <
-                                                new Date().getTime() / 1000 +
-                                                15552000 ? (
+                                            ele?.time >
+                                                ((new Date().getTime() / 1000) +
+                                                    15552000) ? (
                                                 <tr>
                                                     <td>
                                                         USD {ele?.bondAmount}
