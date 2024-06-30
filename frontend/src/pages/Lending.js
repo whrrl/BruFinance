@@ -187,7 +187,8 @@ const Lending = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">$ {trxData?.totalAssetsValue}</span>
+                            <span className="assets-val">$ 79,382,425.74</span>
+                            {/* <span className="assets-val">$ {trxData?.totalAssetsValue}</span> */}
                         </p>
                     </div>
                     <div className="a-bottom">
@@ -208,7 +209,8 @@ const Lending = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">$ {trxData?.totalAssetsValueMinted}</span>
+                            <span className="assets-val">$ 21,440,976.12</span>
+                            {/* <span className="assets-val">$ {trxData?.totalAssetsValueMinted}</span> */}
                         </p>
                     </div>
                     <div className="a-bottom">
@@ -341,10 +343,10 @@ const Lending = () => {
                                                     Show Bonds
                                                 </p>
                                                 <p>Total Issued Bonds : $ {bruBondBalance?.bondAmount
-                                                        ? bruBondBalance?.bondAmount?.toFixed(
-                                                            3,
-                                                        )
-                                                        : 0.0}{" "}</p>
+                                                    ? bruBondBalance?.bondAmount?.toFixed(
+                                                        3,
+                                                    )
+                                                    : 0.0}{" "}</p>
                                             </div>
                                             <button
                                                 className="btn-continue"

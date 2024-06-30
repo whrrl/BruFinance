@@ -31,7 +31,9 @@ const Holding = () => {
                 <Card.Body className="holding-body">
                     <Row>
                         <Col className="mb-2" sm={12}>
-                            <Card.Title>Indian Agro Pool <small className="view-details">View Details</small></Card.Title>
+                            <Card.Title>Indian Agro Pool
+                                {/* <small className="view-details">View Details</small> */}
+                            </Card.Title>
                         </Col>
                         <Col md={6} sm={12} >
                             <Card className=" holding-box">

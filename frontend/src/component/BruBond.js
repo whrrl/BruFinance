@@ -33,10 +33,10 @@ const BruBond = () => {
                         <Card.Img variant="top" src={sprout} style={{ padding: "10px" }} />
                         <Card.Body>
                             <Card.Title>Indian Agro Pool</Card.Title>
-                            <Card.Text>
+                            {/* <Card.Text>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </Card.Text>
+                            </Card.Text> */}
                             <Row>
                                 <Col md={4} sm={12} >
                                     <b>Lending Yield : <span className="bond-value">12% P.A.</span></b>

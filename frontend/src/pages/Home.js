@@ -15,7 +15,7 @@ const Home = () => {
         //console.log(trxData,'data')
         if (trxData.success) {
             console.log("%c Line:14 🍯 trxData", "color:#4fff4B", trxData);
-            setTrxData(trxData?.data)
+            setTrxData(trxData)
         }
     }
 
@@ -40,8 +40,9 @@ const Home = () => {
                             <Card className="mx-4 asset-box">
                                 <Card.Body>
                                     <h1 className="mt-2">
-                                        <PiCurrencyInrThin /> {trxData?.totalAssetsValue
-                                            ? trxData?.totalAssetsValue
+                                        {/* <PiCurrencyInrThin /> */}
+                                        {trxData?.totalAssetsValue
+                                            ? trxData?.totalAssetsValue?.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
                                             : 0}
                                     </h1>
                                     <p>
