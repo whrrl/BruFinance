@@ -1,22 +1,22 @@
-import React, {useState} from "react"
-import {Modal} from "react-bootstrap"
+import React, { useState } from "react"
+import { Modal } from "react-bootstrap"
 import "./Login.scss"
-import {toast} from "react-toastify"
-import {FaUser} from "react-icons/fa"
-import {FiRefreshCw} from "react-icons/fi"
-import {registerUsingOTP, verifyOTPFun, storeData, resendOTPFun} from "../services/apiService"
+import { toast } from "react-toastify"
+import { FaUser } from "react-icons/fa"
+import { FiRefreshCw } from "react-icons/fi"
+import { registerUsingOTP, verifyOTPFun, storeData, resendOTPFun } from "../services/apiService"
 import Profile from "../Modal/Profile";
 import SelectCurrency from "../Modal/SelectCurrency";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({open, handleClose, bond}) => {
+const Login = ({ open, handleClose, bond }) => {
   const [tab, setTab] = useState("Login")
   const [number, setNumber] = useState()
   const [otp, setOtp] = useState()
   const [profile, setProfile] = useState(false)
   const [currencyModal, setCurrencyModal] = useState(false)
 
-  let navigate = useNavigate(); 
+  let navigate = useNavigate();
 
   const handleNumber = (e) => {
     if (e.target.value?.length === 11) {
@@ -33,61 +33,63 @@ const Login = ({open, handleClose, bond}) => {
     }
   }
 
-  const handleLogin = async() => {
+  const handleLogin = async () => {
     if (!number || number?.length < 10) {
       return toast.error("Please Provide Valid Number")
     }
     if (number?.length === 10) {
       setTab("Otp")
       const data = await registerUsingOTP(number)
-      if(data.success){
+      if (data.success) {
         toast.success("OTP sent successfully")
       }
     }
   }
 
-  const handleResend = async() =>{
+  const handleResend = async () => {
     const data = await resendOTPFun(number)
-      if(data.success){
-        toast.success("OTP resent successfully")
-      }
+    if (data.success) {
+      toast.success("OTP resent successfully")
+    }
   }
 
-  const handleSignup = async() => {
+  const handleSignup = async () => {
     if (!number || number?.length < 10) {
       return toast.error("Please Provide Valid Number")
     }
     if (number?.length === 10) {
       setTab("Otp")
       const data = await registerUsingOTP(number)
-      if(data.success){
+      if (data.success) {
         toast.success("OTP sent successfully")
       }
     }
   }
 
-  const handleOtp = async() => {
+  const handleOtp = async () => {
     if (!otp || otp?.length < 4) {
       return toast.error("Please Provide Valid OTP")
     }
     if (otp?.length === 4) {
-      let verifyData ={
-        phoneNo:`91${number}`,
-        code:otp,
+      let verifyData = {
+        phoneNo: `91${number}`,
+        code: otp,
       }
       handleClose()
       const data = await verifyOTPFun(verifyData)
-      storeData('token',data.token)
-      if(data.success === true){
+      storeData('token', data.token)
+      if (data.success === true) {
         // console.log(data,'usersss',data.user)
         toast.success("OTP verified successfully")
-        if(data.user?.profileCompleted === "true"){
-          if(bond){
-            setCurrencyModal(!currencyModal)
-          }else{
-              navigate('/borrow');
+        if (data.user?.profileCompleted === "true") {
+          if (bond) {
+            // setCurrencyModal(!currencyModal)
+            navigate('/home');
+
+          } else {
+            navigate('/borrow');
           }
-        }else{
+        } else {
           handleClose()
           setProfile(!profile)
         }
@@ -95,8 +97,8 @@ const Login = ({open, handleClose, bond}) => {
     }
   }
 
-  const handleProfile = async() => setProfile(!profile);
-  const handleCurrency = async() => setCurrencyModal(!currencyModal);
+  const handleProfile = async () => setProfile(!profile);
+  const handleCurrency = async () => setCurrencyModal(!currencyModal);
 
   return (
     <>
@@ -148,7 +150,7 @@ const Login = ({open, handleClose, bond}) => {
               <button className="btn-other" onClick={handleOtp}>
                 Login
               </button>
-              <div onClick={()=>handleResend()} style ={{cursor:"pointer"}} className="login-footer">
+              <div onClick={() => handleResend()} style={{ cursor: "pointer" }} className="login-footer">
                 <FiRefreshCw />
                 <p>Resend OTP</p>
               </div>
@@ -183,9 +185,9 @@ const Login = ({open, handleClose, bond}) => {
           )}
         </Modal.Body>
       </Modal>
-      
-      <Profile open={profile} handleClose={handleProfile}/>
-      <SelectCurrency open={currencyModal} handleClose={handleCurrency}/>
+
+      <Profile open={profile} handleClose={handleProfile} />
+      <SelectCurrency open={currencyModal} handleClose={handleCurrency} />
     </>
   )
 }

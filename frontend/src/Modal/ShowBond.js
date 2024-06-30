@@ -53,11 +53,6 @@ const ShowBond = ({ open, handleClose }) => {
         if (!address || !signer) return;
         const getData = async () => {
             let getMyBondData = await getUserBondIds(signer, address, chainId);
-            console.log(
-                "%c Line:23 🍓 getMyBondData",
-                "color:#ffdd4d",
-                getMyBondData,
-            );
             setBruBondBalance(getMyBondData);
         };
         getData();

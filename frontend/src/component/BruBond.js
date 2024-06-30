@@ -21,7 +21,9 @@ const BruBond = () => {
         if (!profData.success) {
             toast.error("Error while get profile")
         }
-        window.location.replace(`https://buy.stripe.com/test_dR617C66B5SM7O8001?client_reference_id=${profData?.data?.user?._id}`)
+        let url = `https://buy.stripe.com/test_dR617C66B5SM7O8001?client_reference_id=${profData?.data?.user?._id}`
+        window.open(url, '_blank').focus();
+        // window.location.replace(``)
     }
 
 
@@ -32,7 +34,7 @@ const BruBond = () => {
                     <Card className="bond-card">
                         <Card.Img variant="top" src={sprout} style={{ padding: "10px" }} />
                         <Card.Body>
-                            <Card.Title>Indian Agro Pool</Card.Title>
+                            <h2>Indian Agro Pool</h2>
                             {/* <Card.Text>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

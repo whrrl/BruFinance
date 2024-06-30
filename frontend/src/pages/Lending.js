@@ -30,7 +30,7 @@ import { getTokenBalance } from "../utility/token";
 import { getUserBondIds } from "../utility/pool";
 import { Button } from "react-bootstrap";
 import copy from "copy-to-clipboard";
-import { useActiveAccount, useActiveWalletChain, } from "thirdweb/react";
+import { useActiveAccount, useActiveWalletChain, useWalletImage, useWalletInfo, } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 import { ethers5Adapter } from "thirdweb/adapters/ethers5";
 import { getTotalDepositors } from "../services/apiService";
@@ -85,11 +85,9 @@ const Lending = () => {
 
     useEffect(() => {
         if (add && add.address) {
-            console.log("%c Line:80 🍷 add", "color:#33a5ff", add);
             setAddress(add.address)
             if (chain && chain.id && chain.rpc) {
                 setChainId(chain.id)
-                console.log("%c Line:81 🍰 chain", "color:#33a5ff", chain);
                 setSignerFun(chain, add)
             }
         }
@@ -171,7 +169,7 @@ const Lending = () => {
                             href="https://polygonscan.com/token/0xf0c8CE0aE6c3EBbD2b057cD85bbF4045344DA02B"
                             target="_blank"
                         >
-                            View depositors on polygon network
+                            View on chain depositors
                         </a>
                     </div>
                 </div>
@@ -197,7 +195,7 @@ const Lending = () => {
                             href="https://polygonscan.com/address/0xc345e8f86E7EFbCB2cC4302b2dE116E4EBB727bA"
                             target="_blank"
                         >
-                            View assets on polygon network
+                            View on chain assets
                         </a>
                     </div>
                 </div>
@@ -219,7 +217,7 @@ const Lending = () => {
                             href="https://polygonscan.com/address/0xc345e8f86E7EFbCB2cC4302b2dE116E4EBB727bA"
                             target="_blank"
                         >
-                            View assets on polygon network
+                            View on chain assets
                         </a>
                     </div>
                 </div>
@@ -418,11 +416,12 @@ const Lending = () => {
                             </div>
                         ) : (
                             <div className="section-content">
-                                <h3>My Wallet</h3>
+                                <h3></h3>
                                 <div className="inner-section">
                                     <div className="leftSectionWallet">
                                         <div className="wallet-heading">
-                                            <p>MetaMask Wallet</p>
+                                            <p>My Wallet</p>
+                                            {/* <p>MetaMask Wallet</p> */}
                                             <span className="connectedText">
                                                 Connected
                                             </span>
