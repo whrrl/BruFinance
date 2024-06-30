@@ -10,6 +10,7 @@ import holding from "../assets/image/vault_black.svg";
 import arrow from "../assets/image/Vector43.png";
 import bond_white from "../assets/image/bond_white.png";
 import poly from "../assets/image/polygon_logo.png";
+import baseLogo from "../assets/image/base.png";
 import vault_white from "../assets/image/vault_white.png";
 import { ImCopy } from "react-icons/im";
 import copy from "copy-to-clipboard";
@@ -20,6 +21,7 @@ import { TfiFaceSad } from "react-icons/tfi";
 import {
     getInrToUsdPrice,
     getNftData,
+    getTotalDepositors,
     updateNFtDataMint,
 } from "../services/apiService";
 import { getPoolDetails } from "../utility/factory";
@@ -31,6 +33,7 @@ import BorrowBondsBru from "../Modal/BorrowBondsBru";
 import { createThirdwebClient } from "thirdweb";
 import { ethers5Adapter } from "thirdweb/adapters/ethers5";
 import { useActiveAccount, useActiveWalletChain, } from "thirdweb/react";
+import { environment } from "../environments/environment";
 
 const client = createThirdwebClient({
     clientId: "8b47ef3dc283abe26da04b0549a7d6e8",
@@ -240,6 +243,21 @@ const Borrow = () => {
         setBuyBondsBruModal(true);
     };
 
+    const [trxData, setTrxData] = useState([]);
+
+    const trx = async () => {
+        const trxData = await getTotalDepositors();
+        //console.log(trxData,'data')
+        if (trxData.success) {
+            console.log("%c Line:14 🍯 trxData", "color:#4fff4B", trxData);
+            setTrxData(trxData)
+        }
+    }
+
+    useEffect(() => {
+        trx()
+    }, [])
+
     return (
         <div className="borrow">
             <div className="top-section">
@@ -263,7 +281,7 @@ const Borrow = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">0</span>
+                            <span className="assets-val">{trxData?.totalAssets}</span>
                         </p>
                     </div>
                     <div className="d-bottom">
@@ -272,7 +290,7 @@ const Borrow = () => {
                             href="https://polygonscan.com/token/0xf0c8CE0aE6c3EBbD2b057cD85bbF4045344DA02B"
                             target="_blank"
                         >
-                            View depositors on polygon network
+                            View on chain depositors
                         </a>
                     </div>
                 </div>
@@ -288,7 +306,7 @@ const Borrow = () => {
                         </p>
                         <p>
                             <img src={arrow} alt="arrow"></img>
-                            <span className="assets-val">$ 0</span>
+                            <span className="assets-val">$ 79,382,425.74</span>
                         </p>
                     </div>
                     <div className="a-bottom">
@@ -297,7 +315,7 @@ const Borrow = () => {
                             href="https://polygonscan.com/address/0xc345e8f86E7EFbCB2cC4302b2dE116E4EBB727bA"
                             target="_blank"
                         >
-                            View assets on polygon network
+                            View on chain assets
                         </a>
                     </div>
                 </div>
@@ -322,8 +340,10 @@ const Borrow = () => {
                     <div className="section-nav">
                         <div id="p-network">
                             <button onClick={MIntNftTilken}>
-                                <img src={poly} alt="token" />
-                                Polygon Network
+                                <img src={environment.contracts[chainId]?.InfuraName == "base" ? baseLogo : poly} alt="token" width="20px" />
+                                {chainId
+                                    ? environment.contracts[chainId]?.name
+                                    : ""}
                             </button>
                         </div>
                         <hr style={{ color: "grey", width: "100%" }} />

@@ -107,7 +107,7 @@ const BorrowBondsBru = ({ open, handleClose, nftData, usdPrice }) => {
             chainId,
             number,
             nftData._id,
-            "USDC",
+            "USDT",
         );
         console.log("%c Line:131 🍻 data", "color:#465975", data);
         if (!data) {
