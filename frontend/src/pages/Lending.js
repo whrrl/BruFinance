@@ -192,7 +192,7 @@ const Lending = () => {
                     <div className="a-bottom">
                         <a
                             rel="noreferrer"
-                            href="https://polygonscan.com/address/0xc345e8f86E7EFbCB2cC4302b2dE116E4EBB727bA"
+                            href="https://polygonscan.com/address/0xf0c8ce0ae6c3ebbd2b057cd85bbf4045344da02b"
                             target="_blank"
                         >
                             View on chain assets
@@ -214,7 +214,7 @@ const Lending = () => {
                     <div className="a-bottom">
                         <a
                             rel="noreferrer"
-                            href="https://polygonscan.com/address/0xc345e8f86E7EFbCB2cC4302b2dE116E4EBB727bA"
+                            href="https://polygonscan.com/address/0xf0c8ce0ae6c3ebbd2b057cd85bbf4045344da02b"
                             target="_blank"
                         >
                             View on chain assets
